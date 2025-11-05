@@ -23,7 +23,19 @@ class LinkedList {
     }
     this.length++;
   }
-  prepend() {}
+  prepend(value) {
+    const newNode = new Node(value);
+    //if the link list is empty
+    if (this.head === null) {
+      this.head = newNode;
+      this.tail = newNode;
+    } else {
+      //if the link is not empty
+      newNode.next = this.head;
+      this.head = newNode;
+    }
+    this.length++;
+  }
   insert() {}
   remove() {}
   print() {
@@ -42,5 +54,10 @@ const linkedlist = new LinkedList();
 linkedlist.append(1);
 linkedlist.append(2);
 linkedlist.append(3);
+
+
+linkedlist.prepend(10)
+linkedlist.prepend(20)
+linkedlist.prepend(30)
 
 linkedlist.print();
