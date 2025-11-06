@@ -106,10 +106,10 @@ const linkedlist = new LinkedList();
 
 linkedlist.append("A");
 linkedlist.append("B");
+linkedlist.append("C");
 linkedlist.append("D");
+linkedlist.append("E");
 
 linkedlist.print();
-linkedlist.remove(2);
-linkedlist.remove(0);
-linkedlist.remove(0);
+linkedlist.remove(4);
 linkedlist.print();
